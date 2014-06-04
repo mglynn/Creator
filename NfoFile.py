@@ -47,8 +47,6 @@ class NfoFile:
             actor = et.SubElement(root, 'actor')
             name = et.SubElement(actor, 'name')
             name.text = a['name']
-            role = et.SubElement(actor, 'role')
-            role.text = a['role']
 
         tree = et.ElementTree(root)
         tree.write(self.f, pretty_print=True, xml_declaration=True)
